@@ -1,0 +1,26 @@
+body {
+    display: flex;
+    justify-content: space-evenly;
+    height: 95vh;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container {
+    display: flex;
+    border: solid black 1px;
+    height: 800px;
+    width: 800px;
+    flex-shrink: 0;
+}
+
+.columnClass {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.boxClass {
+    border: solid black 1px;
+    flex-grow: 1;
+}
