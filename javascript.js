@@ -22,6 +22,7 @@ let boxNode = document.querySelectorAll(`.boxClass`)
 boxNode.forEach((e) => {
     e.addEventListener('mouseover', () => {
         e.style.backgroundColor = `purple`
+        e.style.border = `solid purple 1px`
     })
 })
 
@@ -30,6 +31,7 @@ boxNode.forEach((e) => {
 button.addEventListener('click', () => {
     boxNode.forEach((e) => {
         e.style.backgroundColor = ``
+        e.style.border = ``
     })
     let reset = prompt(`Enter new grid size`, `16`)
     if (reset > 100) {
@@ -42,6 +44,7 @@ button.addEventListener('click', () => {
     boxNode.forEach((e) => {
         e.addEventListener('mouseover', () => {
             e.style.backgroundColor = `purple`
+            e.style.border = `solid purple 1px`
         })
     })
 })
