@@ -14,7 +14,6 @@ function createGrid (columnAmount, rowAmount) {
 }
 createGrid(16, 16)
 
-// const columnNode = document.querySelectorAll(`.columnClass`)
 let boxNode = document.querySelectorAll(`.boxClass`)
 
 // Iterates through box node list and for every box allow mouseover to
@@ -27,16 +26,21 @@ boxNode.forEach((e) => {
 })
 
 
-// Button resets game. Changing the grid size is WIP
+// Button resets game with 100x100 max size
 button.addEventListener('click', () => {
     boxNode.forEach((e) => {
         e.style.backgroundColor = ``
         e.style.border = ``
     })
     let reset = prompt(`Enter new grid size`, `16`)
-    if (reset > 100) {
-        alert(`100 maximum grid size! Choose again`)
-        reset = prompt(`Enter new grid size`, `16`)
+    while (true) {
+        if (reset > 100) {
+            alert(`100 maximum grid size! Choose again`)
+            reset = prompt(`Enter new grid size`, `16`)
+        }
+        else {
+            break
+        }
     }
     container.innerHTML = '';
     createGrid(reset, reset)
